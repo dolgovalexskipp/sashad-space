@@ -2,113 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern design system for Alexander Dolgov's portfolio
-All colors MUST be HSL.
-*/
+/* B2B Tech-Consulting Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 140 20% 98%;
-    --foreground: 140 10% 5%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 140 10% 5%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 140 10% 5%;
-
-    --primary: 142 75% 35%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 142 65% 45%;
-
-    --secondary: 140 15% 90%;
-    --secondary-foreground: 140 10% 15%;
-
-    --muted: 140 15% 94%;
-    --muted-foreground: 140 10% 50%;
-
-    --accent: 142 75% 35%;
-    --accent-foreground: 0 0% 98%;
-
+    /* B2B Colors - Light Mode */
+    --background: 213 20% 97%; /* #F7F8FA */
+    --surface: 0 0% 100%; /* #FFFFFF */
+    --foreground: 216 87% 10%; /* #0B1220 */
+    --muted-foreground: 218 12% 35%; /* #475569 */
+    --border: 220 13% 91%; /* #E5E7EB */
+    --muted-2: 213 16% 58%; /* #94A3B8 */
+    
+    /* Accent Colors */
+    --accent-link: 221 83% 53%; /* #2563EB */
+    --accent-cta: 152 69% 43%; /* #1FA271 */
+    
+    /* Legacy mappings for components */
+    --card: var(--surface);
+    --card-foreground: var(--foreground);
+    --popover: var(--surface);
+    --popover-foreground: var(--foreground);
+    --primary: var(--accent-cta);
+    --primary-foreground: 0 0% 100%;
+    --secondary: 213 20% 94%; /* Light neutral */
+    --secondary-foreground: var(--foreground);
+    --muted: 213 20% 94%;
+    --accent: var(--accent-link);
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 140 13% 88%;
-    --input: 140 13% 88%;
-    --ring: 142 75% 35%;
-
-    --success: 142 71% 45%;
-    --warning: 38 92% 50%;
-    --info: 142 50% 40%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(142 75% 35%), hsl(142 50% 40%));
-    --gradient-hero: linear-gradient(135deg, hsl(142 75% 35% / 0.1), hsl(142 50% 40% / 0.1));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(140 15% 96%));
-
-    --shadow-sm: 0 1px 2px 0 hsl(140 10% 5% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(140 10% 5% / 0.1), 0 2px 4px -1px hsl(140 10% 5% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(140 10% 5% / 0.1), 0 4px 6px -2px hsl(140 10% 5% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(140 10% 5% / 0.1), 0 10px 10px -5px hsl(140 10% 5% / 0.04);
-    --shadow-glow: 0 0 40px hsl(142 75% 35% / 0.15);
-
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s ease-out;
-
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --input: var(--border);
+    --ring: var(--accent-link);
+    
+    /* Design tokens */
+    --radius-sm: 0.625rem; /* 10px */
+    --radius: 0.75rem; /* 12px */
+    --radius-lg: 1rem; /* 16px */
+    
+    /* Shadows - subtle, only on hover */
+    --shadow-subtle: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-hover: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    
+    /* Transitions */
+    --transition-smooth: all 180ms ease-out;
+    
+    /* Sidebar colors */
+    --sidebar-background: var(--surface);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--foreground);
+    --sidebar-primary-foreground: var(--surface);
+    --sidebar-accent: var(--secondary);
+    --sidebar-accent-foreground: var(--foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--accent-link);
   }
 
   .dark {
-    --background: 140 20% 4%;
-    --foreground: 140 20% 98%;
-
-    --card: 140 15% 6%;
-    --card-foreground: 140 20% 98%;
-
-    --popover: 140 15% 6%;
-    --popover-foreground: 140 20% 98%;
-
-    --primary: 142 65% 55%;
-    --primary-foreground: 140 20% 4%;
-
-    --secondary: 140 15% 8%;
-    --secondary-foreground: 140 20% 98%;
-
-    --muted: 140 15% 8%;
-    --muted-foreground: 140 15% 65%;
-
-    --accent: 140 15% 8%;
-    --accent-foreground: 140 20% 98%;
-
+    /* B2B Colors - Dark Mode */
+    --background: 216 50% 6%; /* #0B0F19 */
+    --surface: 217 35% 9%; /* #101623 */
+    --foreground: 220 13% 91%; /* #E5E7EB */
+    --muted-foreground: 213 16% 58%; /* #94A3B8 */
+    --border: 217 19% 17%; /* #1F2937 */
+    --muted-2: 213 16% 58%; /* #94A3B8 */
+    
+    /* Accent Colors */
+    --accent-link: 214 95% 69%; /* #3B82F6 */
+    --accent-cta: 152 69% 43%; /* #1FA271 */
+    
+    /* Legacy mappings */
+    --card: var(--surface);
+    --card-foreground: var(--foreground);
+    --popover: var(--surface);
+    --popover-foreground: var(--foreground);
+    --primary: var(--accent-cta);
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 35% 12%;
+    --secondary-foreground: var(--foreground);
+    --muted: 217 35% 12%;
+    --accent: var(--accent-link);
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 140 20% 98%;
-
-    --border: 140 15% 15%;
-    --input: 140 15% 15%;
-    --ring: 142 65% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: var(--foreground);
+    --input: var(--border);
+    --ring: var(--accent-link);
+    
+    /* Sidebar colors */
+    --sidebar-background: var(--surface);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--foreground);
+    --sidebar-primary-foreground: var(--surface);
+    --sidebar-accent: var(--secondary);
+    --sidebar-accent-foreground: var(--foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--accent-link);
   }
 }
 
@@ -119,23 +109,74 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-info bg-clip-text text-transparent;
+  /* B2B Components */
+  .surface-card {
+    @apply bg-surface border border-border rounded-lg;
   }
   
-  .glass-card {
-    @apply backdrop-blur-sm bg-card/80 border border-border/50;
+  .surface-card:hover {
+    box-shadow: var(--shadow-hover);
   }
   
-  .hero-button {
-    @apply bg-gradient-to-r from-primary to-info text-primary-foreground font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-glow hover:scale-105 active:scale-95;
+  .btn-primary {
+    @apply bg-primary text-primary-foreground font-medium px-6 py-3 rounded-lg;
+    @apply transition-all duration-180 ease-out;
+    @apply hover:scale-[1.01] hover:shadow-lg;
   }
   
-  .section-button {
-    @apply bg-card border border-border text-card-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-md;
+  .btn-secondary {
+    @apply bg-surface border border-border text-foreground font-medium px-6 py-3 rounded-lg;
+    @apply transition-all duration-180 ease-out;
+    @apply hover:bg-secondary hover:scale-[1.01];
+  }
+  
+  .chip-outline {
+    @apply bg-surface border border-border text-muted-foreground text-sm px-3 py-1 rounded-lg;
+    @apply font-medium;
+  }
+  
+  .text-heading-1 {
+    @apply text-5xl font-semibold;
+  }
+  
+  .text-heading-2 {
+    @apply text-4xl font-semibold;
+  }
+  
+  .text-heading-3 {
+    @apply text-2xl font-semibold;
+  }
+  
+  .text-body {
+    @apply text-base leading-relaxed;
+  }
+  
+  .text-body-large {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .container-main {
+    @apply max-w-6xl mx-auto px-4;
+  }
+  
+  .grid-12 {
+    @apply grid grid-cols-12 gap-6;
+  }
+  
+  .spacing-section {
+    @apply py-16 md:py-24;
   }
 }

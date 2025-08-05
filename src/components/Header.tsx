@@ -13,11 +13,11 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-card">
-      <div className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border">
+      <div className="container-main py-4">
         <nav className="flex items-center justify-between">
-          <div className="text-xl font-bold gradient-text">
-            Aleksandr (Sasha) Dolgov 🚀
+          <div className="text-xl font-semibold text-foreground">
+            Aleksandr (Sasha) Dolgov
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

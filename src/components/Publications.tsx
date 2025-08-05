@@ -79,47 +79,38 @@ const Publications = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 gradient-text">
-            {t('publications.title')}
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {publications.map((pub, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 animate-fade-in cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => window.open(pub.url, '_blank')}
-              >
-                <CardHeader className="pb-3">
-                  <div className="flex items-start justify-between">
-                    <Badge 
-                      variant="outline" 
-                      className={`mb-2 ${getTypeColor(pub.type)}`}
-                    >
-                      <span className="mr-2">{pub.icon}</span>
-                      {getTypeLabel(pub.type)}
-                    </Badge>
-                    <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  
-                  <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors">
-                    {pub.title}
-                  </CardTitle>
-                </CardHeader>
-                
-                <CardContent className="pt-0">
-                  <div className="flex items-center justify-between text-sm text-muted-foreground">
-                    <span className="font-medium">{pub.publication}</span>
-                    <span>{pub.year}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+    <section className="spacing-section bg-surface">
+      <div className="container-main">
+        <h2 className="text-heading-2 text-foreground mb-12">
+          {t('publications.title')}
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {publications.map((pub, index) => (
+            <div
+              key={index}
+              className="surface-card p-6 transition-all duration-180 ease-out hover:scale-[1.01] cursor-pointer group"
+              onClick={() => window.open(pub.url, '_blank')}
+            >
+              <div className="flex items-start justify-between mb-4">
+                <span className="chip-outline">
+                  {getTypeLabel(pub.type)}
+                </span>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span>{pub.year}</span>
+                  <ExternalLink className="h-3 w-3 opacity-60 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+              
+              <h3 className="text-heading-3 text-foreground mb-3 group-hover:text-accent-link transition-colors">
+                {pub.title}
+              </h3>
+              
+              <div className="text-sm text-muted-foreground font-medium">
+                {pub.publication}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

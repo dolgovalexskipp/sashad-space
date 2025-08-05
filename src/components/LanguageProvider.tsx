@@ -16,9 +16,10 @@ const translations = {
     'nav.contact': 'Контакты',
     
     // Hero section
-    'hero.title': 'Aleksandr (Sasha) Dolgov 🚀',
-    'hero.subtitle': 'Создаю продукты на стыке образования, HR и AI. Управляю командами и выводом продуктов на международные рынки.',
-    'hero.cta': 'Познакомиться',
+    'hero.title': 'Генеративный ИИ и стратегия выхода на рынок',
+    'hero.subtitle': 'Специализируюсь на внедрении AI-решений в продукты и построении международных каналов продаж в B2B сегменте.',
+    'hero.primaryCTA': 'Записаться на звонок',
+    'hero.secondaryCTA': 'Кейсы',
     
     // About section
     'about.title': 'Обо мне',
@@ -56,9 +57,10 @@ const translations = {
     'nav.contact': 'Contact',
     
     // Hero section
-    'hero.title': 'Aleksandr (Sasha) Dolgov 🚀',
-    'hero.subtitle': 'Building products at the intersection of education, HR and AI. Leading teams and bringing products to international markets.',
-    'hero.cta': 'Get to know me',
+    'hero.title': 'Generative AI & Go-to-Market Strategy',
+    'hero.subtitle': 'Specializing in AI product integration and building international B2B sales channels for tech companies.',
+    'hero.primaryCTA': 'Schedule a call',
+    'hero.secondaryCTA': 'Case studies',
     
     // About section
     'about.title': 'About me',
