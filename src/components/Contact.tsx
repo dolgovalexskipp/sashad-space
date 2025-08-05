@@ -1,37 +1,33 @@
-import { useState } from 'react';
 import { useLanguage } from './LanguageProvider';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MessageCircle, Linkedin } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const { t } = useLanguage();
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would normally send the form data to a backend
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', message: '' });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const contactInfo = [
+    {
+      icon: <Mail className="h-6 w-6" />,
+      title: 'Email',
+      value: 'dolgovalex@skipp.dev',
+      link: 'mailto:dolgovalex@skipp.dev',
+      bgColor: 'bg-primary'
+    },
+    {
+      icon: <Linkedin className="h-6 w-6" />,
+      title: 'LinkedIn',
+      value: 'aleks-sasha-dolgov',
+      link: 'https://www.linkedin.com/in/aleks-sasha-dolgov/',
+      bgColor: 'bg-info'
+    },
+    {
+      icon: <MessageCircle className="h-6 w-6" />,
+      title: 'Telegram',
+      value: '@dolgovalex',
+      link: 'https://t.me/dolgovalex',
+      bgColor: 'bg-success'
+    }
+  ];
 
   return (
     <section id="contact" className="py-20 bg-gradient-card">
@@ -45,107 +41,31 @@ const Contact = () => {
             {t('contact.subtitle')}
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Contact Form */}
-            <Card className="glass-card border-0 shadow-lg animate-fade-in">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold">Send a Message</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      {t('contact.name')}
-                    </label>
-                    <Input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      {t('contact.email')}
-                    </label>
-                    <Input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      {t('contact.message')}
-                    </label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={4}
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <Button type="submit" className="hero-button w-full">
-                    {t('contact.send')}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Info */}
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <Card className="glass-card border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 rounded-lg bg-primary text-primary-foreground">
-                      <Mail className="h-6 w-6" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {contactInfo.map((contact, index) => (
+              <a
+                key={index}
+                href={contact.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <Card className="glass-card border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col items-center text-center space-y-4">
+                      <div className={`p-4 rounded-full ${contact.bgColor}/10 text-foreground`}>
+                        {contact.icon}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-1">{contact.title}</h3>
+                        <p className="text-muted-foreground text-sm">{contact.value}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Email</h3>
-                      <p className="text-muted-foreground">alexander@dolgov.dev</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="glass-card border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 rounded-lg bg-info text-white">
-                      <Linkedin className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">LinkedIn</h3>
-                      <p className="text-muted-foreground">linkedin.com/in/alexanderdolgov</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="glass-card border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 rounded-lg bg-success text-white">
-                      <MessageCircle className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Telegram</h3>
-                      <p className="text-muted-foreground">@alexanderdolgov</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
           </div>
         </div>
       </div>

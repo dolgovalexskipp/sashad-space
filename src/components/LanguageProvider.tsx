@@ -16,13 +16,13 @@ const translations = {
     'nav.contact': 'Контакты',
     
     // Hero section
-    'hero.title': 'Александр Долгов',
+    'hero.title': 'Aleksandr (Sasha) Dolgov 🚀',
     'hero.subtitle': 'Создаю продукты на стыке образования, HR и AI. Управляю командами и выводом продуктов на международные рынки.',
     'hero.cta': 'Познакомиться',
     
     // About section
     'about.title': 'Обо мне',
-    'about.content': 'Окончил Финансовый университет при Правительстве РФ. Начинал карьеру в McKinsey & Company и Национальном центре государственно-частного партнерства. С 2017 года работаю в Skyeng: сначала как руководитель по работе с государственным сектором, затем управляющий директор по развитию бизнеса. В Skyeng отвечал за запуск продуктов и развитие партнёрств. Школьная платформа получила около 40 тысяч контрактов на сумму 55 млн рублей в Москве плюс 10 млн рублей в регионах. В 2022 году эта платформа принесла 70 млн рублей контрактов и 25 млн рублей апсейла.',
+    'about.content': 'С 2017 года работаю в Skyeng: сначала как руководитель по работе с государственным сектором, затем управляющий директор по развитию бизнеса. В Skyeng отвечал за запуск продуктов и развитие партнёрств. Школьная платформа получила около 40 тысяч контрактов на сумму 55 млн рублей в Москве плюс 10 млн рублей в регионах. В 2022 году эта платформа принесла 70 млн рублей контрактов и 25 млн рублей апсейла.',
     
     // Projects
     'projects.title': 'Проекты',
@@ -56,13 +56,13 @@ const translations = {
     'nav.contact': 'Contact',
     
     // Hero section
-    'hero.title': 'Alexander Dolgov',
+    'hero.title': 'Aleksandr (Sasha) Dolgov 🚀',
     'hero.subtitle': 'Building products at the intersection of education, HR and AI. Leading teams and bringing products to international markets.',
     'hero.cta': 'Get to know me',
     
     // About section
     'about.title': 'About me',
-    'about.content': 'Graduated from the Financial University under the Government of the Russian Federation. Started my career at McKinsey & Company and the National Center for Public-Private Partnership. Since 2017, I have been working at Skyeng: first as a public sector manager, then as managing director for business development. At Skyeng, I was responsible for launching products and developing partnerships. The school platform secured about 40,000 contracts worth 55 million rubles in Moscow plus 10 million rubles in the regions. In 2022, this platform generated 70 million rubles in contracts and 25 million rubles in upsells.',
+    'about.content': 'Since 2017, I have been working at Skyeng: first as a public sector manager, then as managing director for business development. At Skyeng, I was responsible for launching products and developing partnerships. The school platform secured about 40,000 contracts worth 55 million rubles in Moscow plus 10 million rubles in the regions. In 2022, this platform generated 70 million rubles in contracts and 25 million rubles in upsells.',
     
     // Projects
     'projects.title': 'Projects',

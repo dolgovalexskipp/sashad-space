@@ -17,7 +17,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="text-xl font-bold gradient-text">
-            Alexander Dolgov
+            Aleksandr (Sasha) Dolgov 🚀
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
