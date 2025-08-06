@@ -133,13 +133,13 @@
   
   .btn-primary {
     @apply bg-primary text-primary-foreground font-medium px-6 py-3 rounded-lg;
-    @apply transition-all duration-180 ease-out;
+    @apply transition-all duration-200 ease-out;
     @apply hover:scale-[1.01] hover:shadow-lg;
   }
   
   .btn-secondary {
     @apply bg-surface border border-border text-foreground font-medium px-6 py-3 rounded-lg;
-    @apply transition-all duration-180 ease-out;
+    @apply transition-all duration-200 ease-out;
     @apply hover:bg-secondary hover:scale-[1.01];
   }
   
