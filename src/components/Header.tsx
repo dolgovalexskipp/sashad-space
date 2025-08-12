@@ -21,22 +21,25 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t('nav.about')}
+            <button onClick={() => scrollToSection('publications')} className="text-muted-foreground hover:text-foreground transition-colors">
+              {t('nav.publications')}
             </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
+            <button onClick={() => scrollToSection('competencies')} className="text-muted-foreground hover:text-foreground transition-colors">
+              {t('nav.competencies')}
+            </button>
+            <button onClick={() => scrollToSection('tooling')} className="text-muted-foreground hover:text-foreground transition-colors">
+              {t('nav.tooling')}
+            </button>
+            <button onClick={() => scrollToSection('projects')} className="text-muted-foreground hover:text-foreground transition-colors">
               {t('nav.projects')}
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
+            <button onClick={() => scrollToSection('process')} className="text-muted-foreground hover:text-foreground transition-colors">
+              {t('nav.process')}
+            </button>
+            <button onClick={() => scrollToSection('about')} className="text-muted-foreground hover:text-foreground transition-colors">
+              {t('nav.about')}
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-foreground transition-colors">
               {t('nav.contact')}
             </button>
           </div>

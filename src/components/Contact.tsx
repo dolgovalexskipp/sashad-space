@@ -18,7 +18,7 @@ const Contact = () => {
           {/* Primary CTA */}
           <div className="mb-8">
             <a 
-              href="https://calendly.com/dolgovalex" 
+              href="https://t.me/dolgovalex" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-primary"

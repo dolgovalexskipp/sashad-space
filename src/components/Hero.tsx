@@ -24,45 +24,40 @@ const Hero = () => {
               {t('hero.subtitle')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
               <a 
-                href="https://calendly.com/dolgovalex" 
+                href="https://t.me/dolgovalex" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center"
               >
                 {t('hero.primaryCTA')}
               </a>
-              <button 
-                onClick={() => scrollToSection('projects')}
-                className="btn-secondary inline-flex items-center justify-center"
-              >
-                {t('hero.secondaryCTA')}
-              </button>
+              <div className="flex items-center gap-6 text-sm">
+                <a href="mailto:dolgovalex@skipp.dev" className="text-muted-foreground hover:text-accent-link transition-colors">Email</a>
+                <a href="https://www.linkedin.com/in/aleks-sasha-dolgov/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent-link transition-colors">LinkedIn</a>
+              </div>
+            </div>
+
+            {/* Capability Chips */}
+            <div className="flex flex-wrap gap-2">
+              <span className="chip-outline">English C1</span>
+              <span className="chip-outline">O1 visa holder, work globally & remote</span>
             </div>
           </div>
           
-          {/* Right Column - Image */}
+          {/* Right Column - Logos */}
           <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="surface-card p-2 w-80 h-80">
-              <img 
-                src="/lovable-uploads/84a28192-deb7-47c7-babf-1f7896b24f3b.png" 
-                alt="Aleksandr Dolgov" 
-                className="w-full h-full object-cover rounded-lg"
-              />
+            <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+              {['Forbes','RB.ru','vc.ru','Известия'].map((name) => (
+                <div key={name} className="bg-surface border border-border rounded-lg p-4 flex items-center justify-center">
+                  <span className="text-sm text-muted-foreground font-medium">{name}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
         
-        {/* Client Logos Row */}
-        <div className="mt-16 pt-8 border-t border-border">
-          <div className="flex items-center justify-center gap-8 opacity-60">
-            <span className="text-sm text-muted-foreground font-medium">Skyeng</span>
-            <span className="text-sm text-muted-foreground font-medium">Skipp</span>
-            <span className="text-sm text-muted-foreground font-medium">Metabolism</span>
-            <span className="text-sm text-muted-foreground font-medium">MachUnit</span>
-          </div>
-        </div>
       </div>
     </section>
   );

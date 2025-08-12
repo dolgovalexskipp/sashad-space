@@ -11,14 +11,18 @@ interface LanguageContextType {
 const translations = {
   ru: {
     // Navigation
+    'nav.publications': 'Медиа и публикации',
+    'nav.competencies': 'Компетенции',
+    'nav.tooling': 'Инструменты',
+    'nav.projects': 'Кейсы',
+    'nav.process': 'Процесс',
     'nav.about': 'Обо мне',
-    'nav.projects': 'Проекты',
     'nav.contact': 'Контакты',
     
     // Hero section
-    'hero.title': 'Генеративный ИИ и стратегия выхода на рынок',
-    'hero.subtitle': 'Специализируюсь на внедрении AI-решений в продукты и построении международных каналов продаж в B2B сегменте.',
-    'hero.primaryCTA': 'Записаться на звонок',
+    'hero.title': 'AI-native product leader & go-to-market manager',
+    'hero.subtitle': 'Экспертиза в российском и международном B2B. Помогаю запускать и масштабировать продукты на базе GenAI.',
+    'hero.primaryCTA': 'Написать в Telegram',
     'hero.secondaryCTA': 'Кейсы',
     
     // About section
@@ -26,7 +30,7 @@ const translations = {
     'about.content': 'С 2017 года работаю в Skyeng: сначала как руководитель по работе с государственным сектором, затем управляющий директор по развитию бизнеса. В Skyeng отвечал за запуск продуктов и развитие партнёрств. Школьная платформа получила около 40 тысяч контрактов на сумму 55 млн рублей в Москве плюс 10 млн рублей в регионах. В 2022 году эта платформа принесла 70 млн рублей контрактов и 25 млн рублей апсейла.',
     
     // Projects
-    'projects.title': 'Проекты',
+    'projects.title': 'Кейсы',
     'skipp.title': 'Skipp',
     'skipp.description': 'Платформа Talent-as-a-Service для подбора, проверки и управления топ-разработчиками, дизайнерами, продакт- и проект-менеджерами по всему миру. Более 10 000 проверенных специалистов. Автоматизирует найм, отслеживает эффективность команд и упрощает международные платежи и комплаенс.',
     
@@ -39,8 +43,11 @@ const translations = {
     'current.title': 'Текущая роль',
     'current.description': 'AI Product Manager в stealth-стартапе. Внедряю генеративный ИИ в продукты и разрабатываю стратегии интеграции искусственного интеллекта.',
     
-    // Publications
-    'publications.title': 'Публикации и выступления',
+    // Section titles
+    'publications.title': 'Медиа и публикации',
+    'competencies.title': 'Ключевые компетенции',
+    'tooling.title': 'Инструменты',
+    'process.title': 'Процесс',
     
     // Contact
     'contact.title': 'Контакты',
@@ -52,14 +59,18 @@ const translations = {
   },
   en: {
     // Navigation
+    'nav.publications': 'Media & Publications',
+    'nav.competencies': 'Competencies',
+    'nav.tooling': 'Tooling',
+    'nav.projects': 'Selected Projects',
+    'nav.process': 'Process',
     'nav.about': 'About',
-    'nav.projects': 'Projects',
     'nav.contact': 'Contact',
     
     // Hero section
-    'hero.title': 'Generative AI & Go-to-Market Strategy',
-    'hero.subtitle': 'Specializing in AI product integration and building international B2B sales channels for tech companies.',
-    'hero.primaryCTA': 'Schedule a call',
+    'hero.title': 'AI-native product leader & go-to-market manager',
+    'hero.subtitle': 'Experience in Russian and international B2B. I help launch and scale GenAI-based products.',
+    'hero.primaryCTA': 'Message on Telegram',
     'hero.secondaryCTA': 'Case studies',
     
     // About section
@@ -67,7 +78,7 @@ const translations = {
     'about.content': 'Since 2017, I have been working at Skyeng: first as a public sector manager, then as managing director for business development. At Skyeng, I was responsible for launching products and developing partnerships. The school platform secured about 40,000 contracts worth 55 million rubles in Moscow plus 10 million rubles in the regions. In 2022, this platform generated 70 million rubles in contracts and 25 million rubles in upsells.',
     
     // Projects
-    'projects.title': 'Projects',
+    'projects.title': 'Selected Projects',
     'skipp.title': 'Skipp',
     'skipp.description': 'Talent-as-a-Service platform for sourcing, vetting, and managing top developers, designers, product and project managers worldwide. Over 10,000 vetted professionals. Automates hiring, tracks team performance, and simplifies international payments and compliance.',
     
@@ -80,16 +91,11 @@ const translations = {
     'current.title': 'Current role',
     'current.description': 'AI Product Manager at a stealth startup. Implementing generative AI in products and developing artificial intelligence integration strategies.',
     
-    // Publications
-    'publications.title': 'Publications & Talks',
-    
-    // Contact
-    'contact.title': 'Contact',
-    'contact.subtitle': 'Get in touch to discuss projects or collaboration',
-    'contact.name': 'Name',
-    'contact.email': 'Email',
-    'contact.message': 'Message',
-    'contact.send': 'Send',
+    // Section titles
+    'publications.title': 'Media & Publications',
+    'competencies.title': 'Key Competencies',
+    'tooling.title': 'Tooling',
+    'process.title': 'Process',
   },
 };
 
