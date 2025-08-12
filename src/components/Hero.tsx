@@ -20,7 +20,7 @@ const Hero = () => {
               {t('hero.title')}
             </h1>
             
-            <p className="text-body-large text-muted-foreground mb-8 max-w-2xl">
+            <p className="text-body-large text-muted-foreground mb-6 max-w-2xl">
               {t('hero.subtitle')}
             </p>
             
@@ -41,8 +41,7 @@ const Hero = () => {
 
             {/* Capability Chips */}
             <div className="flex flex-wrap gap-2">
-              <span className="chip-outline">English C1</span>
-              <span className="chip-outline">O1 visa holder, work globally & remote</span>
+              <span className="chip-outline">English C1 · CY/AE → работаю глобально</span>
             </div>
           </div>
           

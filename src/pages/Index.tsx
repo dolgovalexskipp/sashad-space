@@ -1,9 +1,11 @@
 import { LanguageProvider } from '@/components/LanguageProvider';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Projects from '@/components/Projects';
 import Publications from '@/components/Publications';
+import KeyCompetencies from '@/components/KeyCompetencies';
+import Tooling from '@/components/Tooling';
+import Projects from '@/components/Projects';
+import About from '@/components/About';
 import Contact from '@/components/Contact';
 
 const Index = () => {
@@ -14,8 +16,10 @@ const Index = () => {
         <main>
           <Hero />
           <Publications />
-          <About />
+          <KeyCompetencies />
+          <Tooling />
           <Projects />
+          <About />
           <Contact />
         </main>
       </div>
